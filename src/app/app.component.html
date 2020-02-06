@@ -1,12 +1,12 @@
 <div class="example-container" style="display: grid;">
   <mat-form-field>
-    <input matInput placeholder="Enter your email" [formControl]="email" required>
+    <input matInput placeholder="Enter your email" [formControl]="email" (keyup)="onKey($event)" required>
     <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
   </mat-form-field>
   <mat-form-field>
-    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+    <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" (keyup)="onKey($event)">
     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
    </button>
   </mat-form-field>
-  <button mat-raised-button color="primary">Valider</button>
+  <button mat-raised-button color="primary" (click)="submit()">Valider</button>
 </div>
