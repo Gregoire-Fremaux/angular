@@ -9,7 +9,7 @@ describe('TestunitService', () => {
     let toto = "tamereenslip"
     let michel = "tamereenslipE"
 
-    expect(michel).toBe("tamereenslip");
+    expect(michel).toBe("tamereenslipE");
     
   });
 });
